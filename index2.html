@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>หน้าประวัติส่วนตัว - ชื่อคุณ</title>
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">My CV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Study</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <!-- Left column: photo & contact buttons -->
+      <aside class="col-12 col-md-4">
+        <div class="card shadow-sm">
+          <img src="นวพล ก๋าสม.jpeg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h3 id="fullName" class="card-title">NAWAPHON KASOM</h3>
+            <p class="card-subtitle mb-2 text-muted">Position: Artist,Game design</p>
+
+            <div class="mt-3 d-grid gap-2">
+              <button id="viewContactBtn" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                View Contact
+              </button>
+              <button id="downloadCvBtn" class="btn btn-primary">
+                Download CV
+              </button>
+            </div>
+
+            <hr>
+
+            <h6></h6>
+            <p class="small text-muted">A developer passionate about frontend development, UI/UX, and creating responsive websites.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right column: about, education, skills -->
+      <section class="col-12 col-md-8">
+        <div class="card p-3 shadow-sm" id="about">
+          <h4>About me</h4>
+          <p>Passionate about designing board games and small-scale indie games, with a strong interest in producing high-quality game art. Experienced in developing board games and simple hybrid games.</p>
+
+          <hr>
+          <h5 id="education">Study</h5>
+          <ul>
+            <li><strong>Education</strong> Chiang Mai University,College of Arts, Media and Technology,Digital Game — 2025</li>
+            
+          </ul>
+
+          <hr>
+          <h5 id="skills">Skills & tools</h5>
+          <p>
+            <!-- Bootstrap badges -->
+            <span class="badge bg-primary">HTML5</span>
+            <span class="badge bg-secondary">CSS3</span>
+            <span class="badge bg-success">JavaScript</span>
+            <span class="badge bg-info text-dark">Bootstrap</span>
+            <span class="badge bg-warning text-dark">Git</span>
+            <span class="badge bg-dark">Figma</span>
+          </p>
+
+          <hr>
+          <h5>Sample work</h5>
+          <div class="row">
+            <div class="col-sm-6 mb-2">
+              <div class="border rounded p-2">Project PM 2.5 board game — A board game focused on PM 2.5 dust pollution, where players must strategically plan their travel routes and select appropriate masks to protect against varying pollution levels.</div>
+            <img src="b01.png" class="card-img-top" alt="">
+          </div>
+            <div class="col-sm-6 mb-2">
+              <div class="border rounded p-2">Project ShadowDawn — A score-based shooting game set in a magical theme, where players can select skills for each round. Collecting complete sets of combo items grants extra bonus points</div>
+           <img src="Screenshot 2025-08-12 213457.png" class="card-img-top" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Contact Modal (Bootstrap) -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Email:</strong> nawapon09312@gmail.com</p>
+          <p><strong>Phone:</strong> +66 0931267139</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+          <p class="small text-muted">(ปุ่ม View Contact จะเปิด modal นี้ขึ้น และมีการเขียน log ใน console เพื่อใช้เป็นภาพหน้าจอที่ต้องส่ง)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light py-3 mt-5">
+    <div class="container text-center small text-muted">
+      © <span id="footerYear"></span> nawaphon kasom — สร้างด้วย HTML, Bootstrap 5, JS
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
